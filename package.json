@@ -1,0 +1,13 @@
+{
+  "name": "structure-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "结构图志：用音乐、运动、可执行推演和纸笔练习学数据结构",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "test": "node scripts/test.cjs",
+    "test:browser": "node scripts/test-browser.cjs"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": { "playwright": "1.65.1" }
+}

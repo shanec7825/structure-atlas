@@ -1,0 +1,21 @@
+.ji-art { display: block; width: 100%; max-height: 25rem; height: auto; margin-inline: auto; font-family: system-ui, "Microsoft YaHei", sans-serif; }
+.ji-dual { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,13rem),1fr)); align-items: start; gap: .55rem; }
+.ji-dual .ji-art { max-height: 23rem; }
+.ji-order { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .23rem; margin-block: .65rem .2rem; }
+.ji-order small { color: #5e6259; margin-right: .25rem; font-weight: 650; }
+.ji-order span { font-variant-numeric: tabular-nums; min-width: 1.6rem; padding: .08rem .2rem; text-align: center; border: 1px dashed #afa78f; border-radius: .22rem; color: #665f50; }
+.ji-order .ji-in { color: #37564c; background: #d8e4d7; border: 1px solid #a3b7a6; }
+.ji-order .ji-next { color: #533b22; background: #f5dfb1; border: 1px solid #ab8954; font-weight: 750; }
+.ji-controls { display: flex; align-items: flex-end; flex-wrap: wrap; gap: .45rem; padding-block: .3rem; }
+.ji-controls label { display: flex; flex-direction: column; gap: .24rem; font-size: .86rem; color: #4f5148; }
+.ji-controls input,.ji-controls select,.ji-controls button { min-height: 2.7rem; font: inherit; border: 1px solid #ada38f; border-radius: .47rem; }
+.ji-controls input,.ji-controls select { max-width: 100%; padding: .3rem .48rem; color: #253e3b; background: #fffcf2; }
+.ji-controls input[name="teamOrder"] { width: min(19rem, 100%); }
+.ji-controls input[name="teamQuery"],.ji-controls input[name="sampleKey"] { width: 5.6rem; }
+.ji-controls button { color: #294c45; background: #f2ecda; padding: .36rem .72rem; cursor: pointer; }
+.ji-controls button[aria-pressed="true"] { color: #fff; background: #38665c; }
+.ji-controls button:disabled { opacity: .52; cursor: default; }
+.ji-interact { cursor: pointer; }
+.ji-interact:focus-visible,.ji-controls :focus-visible { outline: 3px solid #2e5c85; outline-offset: 2px; }
+.ji-point:focus-visible rect { stroke: #f7d67f; stroke-width: 2.8; }
+@media (max-width: 540px) { .ji-dual { grid-template-columns: 1fr; } }

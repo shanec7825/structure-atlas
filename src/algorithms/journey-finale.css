@@ -1,0 +1,97 @@
+.fin {
+  --fin-ink:#15364b; --fin-water:#96dce3; --fin-gold:#f1c469;
+  color:var(--fin-ink); overflow-wrap:anywhere; min-width:0;
+  border-radius:15px; padding:clamp(14px,2vw,25px);
+}
+.fin p { margin:.5em 0; }
+.fin-pan { overflow-x:auto; overscroll-behavior-x:contain; scrollbar-color:#70a4b0 #183c51; }
+.fin-source { display:flex; flex-wrap:wrap; gap:4px 12px; align-items:baseline; font-size:16px; font-weight:700; }
+.fin-source span { font-size:13px; font-weight:450; }
+.fin-stage {
+  color:#f2fbfb; background:#112d40 radial-gradient(ellipse at 50% 0%,#265166,transparent 68%);
+  border:1px solid #294e60;
+}
+.fin-stage .fin-source { color:#f8fcfc; margin-top:0; }
+.fin-stage .fin-source span { color:#bcdae3; }
+.fin-rig { width:100%; min-width:var(--rig-width); display:block; }
+.fin-lines { fill:none; stroke:#85b9c3; stroke-width:1.8; stroke-linecap:round; }
+.fin-job { cursor:pointer; outline:none; }
+.fin-job rect { fill:#234e60; stroke:#9cdce0; stroke-width:1.2; }
+.fin-job text { fill:#f4ffff; font:bold 20px system-ui,sans-serif; pointer-events:none; }
+.fin-job .fin-priority { font-size:21px; font-variant-numeric:tabular-nums; }
+.fin-job .name { font:13px system-ui,sans-serif; }
+.fin-job.focus rect { fill:#f1c469; stroke:#ffe6a2; stroke-width:1.8; }
+.fin-job.focus text { fill:#3d321a; }
+.fin-job:focus-visible rect { stroke:#fff; stroke-width:3.5; }
+.fin-strip,.fin-hitlist { border-top:1px solid #233b4b2c; padding-top:10px; margin-top:10px; font-size:14px; }
+.fin-strip span { font-weight:700; margin-right:8px; }
+.fin-stage .fin-strip { border-color:#84b2bd59; color:#def0f2; }
+.fin-stage .fin-strip span { color:#95dbe2; }
+.fin-score { background:#eaf6f7; border:1px solid #aed4d9; }
+.fin-score .fin-source { margin-top:0; }
+.fin-score .fin-source span { color:#3c6674; }
+.fin-staff { display:flex; align-items:center; gap:5px; flex-wrap:wrap; padding:6px 0 9px; }
+.fin-bead {
+  display:grid; justify-items:center; align-content:center; gap:2px; position:relative;
+  min-height:55px; min-width:41px; max-width:100%; padding:3px 7px 9px;
+  background:#fbffff; border:1px solid #a8cbd1; border-radius:7px; color:#15364b;
+}
+.fin-bead::after { content:""; position:absolute; bottom:3px; width:9px; height:3px; border-radius:3px; background:#647480; }
+.fin-bead[data-voice="0"]::after { background:#24557d; width:11px; }
+.fin-bead[data-voice="1"]::after { background:#197878; width:7px; }
+.fin-bead[data-voice="2"]::after { background:#93640d; width:4px; }
+.fin-bead small { color:#4c6571; font:11px/1.1 system-ui,sans-serif; font-variant-numeric:tabular-nums; }
+.fin-bead b { font-size:18px; max-width:13ch; line-height:1.1; overflow-wrap:anywhere; }
+.fin-bead.matched { background:#cce8ec; border-bottom-color:#3f8292; }
+.fin-bead.active { background:#ffe6a4; border-color:#946819; outline:1px solid #946819; }
+.fin-motif { display:flex; align-items:center; gap:11px; border-top:1px dashed #92bcc5; padding-top:3px; }
+.fin-motif >span { font-size:14px; font-weight:650; color:#315f6e; flex-shrink:0; }
+.fin-motif .fin-bead { min-height:45px; min-width:35px; }
+.fin-score .fin-hitlist { color:#275363; }
+.fin-timing { background:#edf5f6; border:1px solid #bad4d9; }
+.fin-timing .fin-source { margin-top:0; }
+.fin-lanes { display:grid; padding:6px 0; }
+.fin-lane {
+  display:grid; grid-template-columns:24px minmax(10px,1fr) minmax(46px,auto); align-items:center;
+  gap:8px; min-height:26px; border-bottom:1px solid #c5dade;
+}
+.fin-lane:last-child { border-bottom:0; }
+.fin-lane span,.fin-lane b { font:650 14px system-ui,sans-serif; font-variant-numeric:tabular-nums; }
+.fin-lane span { color:#345868; }
+.fin-lane b { text-align:right; }
+.fin-meter {
+  width:100%; height:15px; display:flex; align-items:center; border-left:1px solid #8dabb4;
+  background:repeating-linear-gradient(90deg,transparent 0,transparent calc(25% - 1px),#b4ced2 calc(25% - 1px),#b4ced2 25%);
+}
+.fin-lane i { height:8px; display:block; width:var(--width); background:#68aaba; border-radius:0 2px 2px 0; }
+.fin-lane.placed i { background:#2a6c84; }
+.fin-lane.active i { background:#b47c1b; box-shadow:inset 0 -2px #956412; }
+.fin-nav,.fin-inputs,.fin-actions { display:flex; flex-wrap:wrap; align-items:end; gap:7px; margin:.65rem 0; }
+.fin-nav { align-items:center; }
+.fin-nav span { color:#4c6776; font-variant-numeric:tabular-nums; font-size:14px; }
+.fin-inputs label { display:grid; grid-template-columns:minmax(0,1fr); gap:3px; font-size:14px; max-width:100%; }
+.fin-inputs input,.fin-inputs select {
+  color:#163747; background:#fcfefd; padding:7px 9px; border:1px solid #a8bfc7; border-radius:5px;
+  max-width:100%; min-width:0; min-height:38px;
+}
+.fin-inputs input[name="rank"],.fin-inputs input[name="urgency"] { width:75px; }
+.fin-nav button,.fin-actions button,.fin-inputs button,.fin button {
+  border:1px solid #a5bbc4; border-radius:6px; padding:7px 10px; min-height:37px;
+  color:#194052; background:#fbfefd; font-weight:550;
+}
+.fin-nav button[data-op="next"],.fin-inputs button[data-op="search"],.fin-inputs button[data-op="add"] { background:#164a64; color:white; border-color:#164a64; }
+.fin-methods { display:flex; gap:12px 24px; flex-wrap:wrap; }
+.fin-methods .fin-actions { padding:0; border:0; min-width:0; margin:0; }
+.fin-methods legend { color:#3e636e; padding:0; font-size:14px; margin-bottom:3px; }
+.fin-sort-params label:first-child { flex:1 1 16ch; }
+.fin-extra summary { cursor:pointer; color:#315465; margin:.75rem 0; }
+.fin-extra table { border-collapse:collapse; font-size:14px; margin:.5rem 0; width:min(100%,520px); font-variant-numeric:tabular-nums; }
+.fin-extra table caption { text-align:left; font-weight:600; }
+.fin-extra td,.fin-extra th { border-bottom:1px solid #cad8db; text-align:left; padding:4px 8px 4px 0; }
+@media(max-width:500px) {
+  .fin-inputs label:has(input[name="source"]),.fin-inputs label:has(input[name="motif"]),.fin-inputs label:has(input[name="values"]) { width:100%; flex-basis:100%; }
+  .fin-staff { gap:4px; }
+  .fin-bead { min-width:32px; min-height:48px; padding-inline:5px; }
+  .fin-methods { gap:10px 14px; }
+  .fin { padding:12px; }
+}

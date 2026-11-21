@@ -1,0 +1,43 @@
+.gl-panel { padding-block: .45rem; color: inherit; }
+.gl-panel h3 { font-size: 1.23rem; margin: 0 0 .9rem; }
+.gl-panel p { line-height: 1.6; margin-block: .5rem; }
+.gl-beats { display: flex; flex-wrap: wrap; gap: .35rem; margin: .45rem 0 .9rem; }
+.gl-panel .gl-beat {
+  display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: .03rem .38rem;
+  min-width: 4.8rem; padding: .4rem .6rem; color: #313537; background: #fff8e9;
+  border: 1px solid #c9bba4; border-bottom: 3px solid var(--gl-ink); border-radius: .42rem;
+  text-align: left; white-space: nowrap; cursor: pointer;
+}
+.gl-voice-0 { --gl-ink: #42647e; }
+.gl-voice-1 { --gl-ink: #ab5d43; }
+.gl-voice-2 { --gl-ink: #407b6e; }
+.gl-panel .gl-beat[aria-pressed="true"] { background: #e3eee6; outline: 2px solid #325d55; outline-offset: -2px; }
+.gl-beat strong { font-size: .9rem; }
+.gl-ref, .gl-gap { font-size: .77rem; font-variant-numeric: tabular-nums; }
+.gl-gap { grid-column: 1 / -1; color: #555c55; }
+.gl-move { display: flex; flex-wrap: wrap; gap: .55rem; align-items: center; }
+.gl-move select, .gl-move button { font: inherit; min-height: 2.65rem; border-radius: .4rem; padding: .38rem .75rem; }
+.gl-move select { background: #fff9ed; color: #303a38; border: 1px solid #a69d89; }
+.gl-move button { background: #2e625a; color: white; border: 1px solid #28594f; cursor: pointer; }
+.gl-move :disabled { opacity: .58; cursor: default; }
+.gl-panel :is(button, select, summary):focus-visible { outline: 3px solid #295992; outline-offset: 3px; }
+.gl-detail { margin-top: .85rem; border-top: 1px solid #cdbfa9; padding-top: .65rem; }
+.gl-detail summary { display: list-item; cursor: pointer; font-size: .93rem; }
+.gl-detail pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #ede7da; color: #263b35; padding: .68rem; border-radius: .35rem; line-height: 1.6; }
+.gl-route { overflow-wrap: anywhere; font-variant-numeric: tabular-nums; font-weight: 600; }
+.gl-example { display: none; }
+.gl-panel:has(.gl-target option[data-choice="0"]:checked) .gl-example[data-choice="0"],
+.gl-panel:has(.gl-target option[data-choice="1"]:checked) .gl-example[data-choice="1"],
+.gl-panel:has(.gl-target option[data-choice="2"]:checked) .gl-example[data-choice="2"],
+.gl-panel:has(.gl-target option[data-choice="3"]:checked) .gl-example[data-choice="3"],
+.gl-panel:has(.gl-target option[data-choice="4"]:checked) .gl-example[data-choice="4"],
+.gl-panel:has(.gl-target option[data-choice="5"]:checked) .gl-example[data-choice="5"],
+.gl-panel:has(.gl-target option[data-choice="6"]:checked) .gl-example[data-choice="6"],
+.gl-panel:has(.gl-target option[data-choice="7"]:checked) .gl-example[data-choice="7"],
+.gl-panel:has(.gl-target option[data-choice="8"]:checked) .gl-example[data-choice="8"],
+.gl-panel:has(.gl-target option[data-choice="9"]:checked) .gl-example[data-choice="9"],
+.gl-panel:has(.gl-target option[data-choice="10"]:checked) .gl-example[data-choice="10"],
+.gl-panel:has(.gl-target option[data-choice="11"]:checked) .gl-example[data-choice="11"],
+.gl-panel:has(.gl-target option[data-choice="12"]:checked) .gl-example[data-choice="12"],
+.gl-panel:has(.gl-target option[data-choice="13"]:checked) .gl-example[data-choice="13"],
+.gl-panel:has(.gl-target option[data-choice="14"]:checked) .gl-example[data-choice="14"] { display: block; }
